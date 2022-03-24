@@ -49,21 +49,23 @@ def shop_cart():
 
         if cart_action.lower() == 'done':
             clear_output()
-            break
-            
-    for name, items in cart_dict.items():
-        print(f"{name} your cart has {len(items)} items in it: ")
-        for item in items:
-            print(item)
-            
-        item_len = len(items)
-        if item_len < 5:
-            print(f"Your total is $10")
+            for name, items in cart_dict.items():
+                print(f"{name} your cart has {len(items)} items in it: ")
+                for item in items:
+                    print(item)
+                    
+                item_len = len(items)
+                if item_len < 5:
+                    print(f"Your total is $10")
+                    
 
-        elif item_len < 10:
-            print(f"Your total is $15")
-        else:
-            print(f"Your total is $20")
+                elif item_len < 10:
+                    print(f"Your total is $15")
+                    
+                else: 
+                    print(f"Your total is $20")
+                    
+            break
 
                     
 
